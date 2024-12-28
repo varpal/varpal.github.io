@@ -54,7 +54,15 @@
             height: auto;
             border-radius: 4px;
         }
+        .project-card ul {
+            margin-left: 20px; /* Add space before the bullet points */
+            padding-left: 0;   /* Remove default padding */
+            list-style-type: disc; /* Use default disc bullets */
+        }
 
+        .project-card li {
+            margin-bottom: 5px; /* Add spacing between bullets */
+        }
         .download-button {
             display: inline-block;
             padding: 0.5rem 1rem;
@@ -82,32 +90,56 @@
 </head>
 <body>
     <nav>
-        <a href="#projects">Projects</a>
         <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
         <a href="#resume">Resume</a>
     </nav>
 
     <section id="about">
-        <h2>About Me</h2>
-        <p>Write your bio here. Share your background, interests, and goals.</p>
+        <h2>About Varun Pal</h2>
+        <img src="/images/pfp.jpg"
+            width="150" 
+            height="200">
+        <p>I am junior at UIUC studying Computer Engineering. My academic and career interests span Software Engineering, Computer Systems, Computer Vision, Machine Learning, and other related topics. 
+            To contact me please email me at vpal2 at illinois dot edu. My resume can be viewed and downloaded below.
+        </p>
+    </section>
+
+    <section id="research">
+        <h2>Research</h2>
+        <p> Currently working under Prof Saurabh Gupta in the Computer Vision and Robotics space. More comming soon :)
+        </p>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-grid">
-            <div class="project-card">
-                <img src="/images/OShead.png" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>Description of your first project.</p>
-                <div class="video-container">
-                    <!-- Replace with your video embed code -->
-                    <iframe src="about:blank" frameborder="0" allowfullscreen></iframe>
-                </div>
+            <div class="project-card">  
+                <img src="/images/OShead.png" style="width: 240px; height: 180; border-radius: 4px;">
+                <h3>A RISC-V based Opperating System Kernel</h3>
+                <p>Key Features: </p>
+                <ul>
+                    <li>Page Virtual Memory Protection</li>
+                    <li>Multiple User processes with preemptive thread switching in user space</li>
+                    <li>Expandable file system based on ext2</li>
+                    <li>VirtIO Block device driver</li>
+                    <li>Can load and execute any elf file</li>
+
+                    <li>VGA Display Driver</li>
+                    <li>User Programs: POSIX like Shell, Snake game</li>
+                </ul>
+                <p><strong>Why "OStritch"?</strong> During development, we encountered a quirky bug: increasing the timer speed for preemptive interrupts caused random unexpected crashes. Our initial solution was to implement the "Ostrich Algorithm" which solved the problem immediately. We realized the bug was due to a locking issue on kernel bootup :)</p>
+                
             </div>
             <div class="project-card">
-                <img src="/api/placeholder/400/300" alt="Project 2">
-                <h3>Project 2</h3>
-                <p>Description of your second project.</p>
+                <img src="/images/PvZ.png" style="width: 480px; height: 180; border-radius: 4px;">
+                <h3>Plants vs Zuofu</h3>
+                <p>Recreation of Plants vs Zombies primarily using System Verilog deployed on the Spartan 7 FPGA</p>
+                <div class="video-container">
+                    <!-- Replace with your video embed code -->
+                    <iframe src="https://youtube.com/embed/dJS4UN0dlOE" frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     </section>
