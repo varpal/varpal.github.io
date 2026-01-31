@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Varun Pal</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">Home</a>
+            <a href="/research.html">Research</a>
+            <a href="/projects.html" class="active">Projects</a>
+            <a href="/courses.html">Courses</a>
+            <a href="/cv_clean.pdf">Resume</a>
+        </nav>
+
+        <h1>Projects</h1>
+
+        <h2>OStritch — A RISC-V OS Kernel</h2>
+        <img src="/images/OShead.png" alt="OStritch OS Kernel" class="project-img">
+        <p>Key features:</p>
+        <ul>
+            <li>Page virtual memory protection</li>
+            <li>Multiple user processes with preemptive thread switching in user space</li>
+            <li>Expandable file system based on ext2</li>
+            <li>VirtIO block device driver</li>
+            <li>Can load and execute any ELF file</li>
+            <li>VGA display driver</li>
+            <li>User programs: POSIX-like shell, Snake game</li>
+        </ul>
+        <p><strong>Why "OStritch"?</strong> During development, we encountered a quirky bug: increasing the timer speed for preemptive interrupts caused random unexpected crashes. Our initial solution was to implement the "Ostrich Algorithm" which solved the problem immediately. We realized the bug was due to a locking issue on kernel bootup :)</p>
+
+        <h2>Plants vs Zuofu</h2>
+        <p>Recreation of Plants vs Zombies primarily using SystemVerilog, deployed on the Spartan 7 FPGA.</p>
+        <div class="video-container">
+            <iframe src="https://youtube.com/embed/dJS4UN0dlOE" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>

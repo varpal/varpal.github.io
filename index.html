@@ -3,151 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-            color: #333;
-        }
-
-        nav {
-            background: #f4f4f4;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-        }
-
-        nav a {
-            margin-right: 2rem;
-            text-decoration: none;
-            color: #333;
-        }
-
-        section {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            border: 1px solid #ddd;
-            padding: 1rem;
-            border-radius: 8px;
-        }
-
-        .project-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
-        .project-card ul {
-            margin-left: 20px; /* Add space before the bullet points */
-            padding-left: 0;   /* Remove default padding */
-            list-style-type: disc; /* Use default disc bullets */
-        }
-
-        .project-card li {
-            margin-bottom: 5px; /* Add spacing between bullets */
-        }
-        .download-button {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            margin-top: 1rem;
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            margin: 2rem 0;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+    <title>Varun Pal</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
-    </nav>
+    <div class="container">
+        <nav>
+            <a href="/research.html">Research</a>
+            <a href="/projects.html">Projects</a>
+            <a href="/courses.html">Courses</a>
+            <a href="/cv_clean.pdf">Resume</a>
+        </nav>
 
-    <section id="about">
-        <h2>About Varun Pal</h2>
-        <img src="/images/pfp.jpg"
-            width="150" 
-            height="200">
-        <p>I am junior at UIUC studying Computer Engineering. My academic and career interests span Software Engineering, Computer Systems, Computer Vision, Machine Learning, and other related topics. 
-            To contact me please email me at vpal2 at illinois dot edu. My resume can be viewed and downloaded below.
-        </p>
-    </section>
+        <h1>Varun Pal</h1>
+        <p class="tagline">Computer Engineering @ UIUC</p>
 
-    <section id="research">
-        <h2>Research</h2>
-        <p> Currently working under Prof Saurabh Gupta in the Computer Vision and Robotics space. More comming soon :)
-        </p>
-    </section>
+        <img src="/images/pfp.jpg" alt="Varun Pal" class="profile-pic">
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">  
-                <img src="/images/OShead.png" style="width: 240px; height: 180; border-radius: 4px;">
-                <h3>A RISC-V based Opperating System Kernel</h3>
-                <p>Key Features: </p>
-                <ul>
-                    <li>Page Virtual Memory Protection</li>
-                    <li>Multiple User processes with preemptive thread switching in user space</li>
-                    <li>Expandable file system based on ext2</li>
-                    <li>VirtIO Block device driver</li>
-                    <li>Can load and execute any elf file</li>
+        <p>I am a senior at the University of Illinois at Urbana-Champaign studying Computer Engineering. My interests span systems, computer vision, and machine learning.</p>
 
-                    <li>VGA Display Driver</li>
-                    <li>User Programs: POSIX like Shell, Snake game</li>
-                </ul>
-                <p><strong>Why "OStritch"?</strong> During development, we encountered a quirky bug: increasing the timer speed for preemptive interrupts caused random unexpected crashes. Our initial solution was to implement the "Ostrich Algorithm" which solved the problem immediately. We realized the bug was due to a locking issue on kernel bootup :)</p>
-                
-            </div>
-            <div class="project-card">
-                <img src="/images/PvZ.png" style="width: 480px; height: 180; border-radius: 4px;">
-                <h3>Plants vs Zuofu</h3>
-                <p>Recreation of Plants vs Zombies primarily using System Verilog deployed on the Spartan 7 FPGA</p>
-                <div class="video-container">
-                    <!-- Replace with your video embed code -->
-                    <iframe src="https://youtube.com/embed/dJS4UN0dlOE" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="resume">
-        <h2>Resume</h2>
-        <p>Download my resume to learn more about my experience and skills.</p>
-        <a href="Varun_Pal_s_Resume_12_24_24.pdf" class="download-button" download>Download Resume (PDF)</a>
-    </section>
+        <p>Contact me at vpal2 at illinois dot edu.</p>
+    </div>
 </body>
 </html>
