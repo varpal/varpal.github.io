@@ -13,10 +13,24 @@
             <a href="/research.html">Research</a>
             <a href="/projects.html" class="active">Projects</a>
             <a href="/courses.html">Courses</a>
-            <a href="/cv_clean.pdf">Resume</a>
+            <a href="/resume.pdf">Resume</a>
         </nav>
 
         <h1>Projects</h1>
+
+        <h2>RISC-67 — 2-Way Superscalar Out-of-Order CPU</h2>
+        <img src="/images/risc67.png" alt="RISC-67 team logo" class="project-img">
+        <p>
+            An out-of-order RV32IM processor in SystemVerilog, built with Albert Jiang and Taowei Huang for ECE 411.
+            Explicit register renaming, per-unit reservation stations, a split load/store queue, and a gshare branch predictor.
+        </p>
+        <ul>
+            <li><strong>645 MHz</strong> max clock frequency</li>
+            <li><strong>~200K</strong> synthesized area</li>
+            <li><strong>0.495</strong> geometric-mean IPC across the six benchmarks</li>
+        </ul>
+        <img src="/images/ooo_cpu_diagram.png" alt="High-level block diagram of the RISC-67 out-of-order pipeline" class="diagram-img">
+        <p>For more info, here is the <a href="/ece411_ooo_cpu_report.pdf">full report</a>.</p>
 
         <h2>OStritch — A RISC-V OS Kernel</h2>
         <img src="/images/OShead.png" alt="OStritch OS Kernel" class="project-img">
