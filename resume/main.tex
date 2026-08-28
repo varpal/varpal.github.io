@@ -1,0 +1,213 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{charter}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.5in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingDual}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=0.5pt, topsep=1pt, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\courseList}[1]{
+    \begin{tabular}{@{}p{0.30\textwidth}@{}p{0.30\textwidth}@{}p{0.30\textwidth}@{}}
+    #1
+    \end{tabular}
+}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Varun Pal} \\ \vspace{1pt}
+    \small 408-748-4386 $|$ varunpal.info $|$ \href{mailto:vpal2@illinois.edu} {\underline{vpal2@illinois.edu}}
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheadingDual
+      {University of Illinois Urbana-Champaign}{Urbana-Champaign, IL}
+      {Masters of Science in Computer Engineering}{Expected Graduation: Fall 2027}
+      {Bachelor of Science in Computer Engineering}{Expected Graduation: Spring 2026}
+      \resumeItemListStart
+        \resumeItem{Technical GPA: \textbf{3.93}}
+        \resumeItem{Relevant Coursework:}
+        \vspace{-5pt}
+        \hspace{0.5cm}\courseList{
+          
+          Operating Systems & Computer Architecture & Distributed Systems  \\
+          
+          Data Structures and Algs & Applied Parallel Programming & Computer Networking \\
+
+          Control Systems & Machine Learning & Deep Learning For Computer Vision
+        }
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Work Experience}
+
+    \resumeSubHeadingListStart
+    \resumeSubheading
+      {Cisco Systems}{May 2026 -- Aug 2026}
+      {Software Engineering Intern}{San Jose, CA}
+      \resumeItemListStart
+        \resumeItem{Re-architected optic transceiver dashboard's \textbf{MongoDB data model and aggregation pipeline}, replacing \textbf{compute heavy scans} over \textbf{8.4M raw sensor records} with Daily \textbf{Docker/cron jobs} materializing \textbf{pre-aggregated snapshot collections} for \textbf{100ms queries vs 16min}, hiding client side latency and reducing storage \textbf{13x}}
+        \resumeItem{Built \textbf{peer optic discovery} feature giving network engineers \textbf{end-to-end network topology} visibility; mapped \textbf{689 peer links} by concurrently parsing \textbf{CDP/LLDP} neighbor tables from \textbf{Cisco NX-OS} switches over \textbf{SSH}}
+        \resumeItem{Implemented \textbf{Pydantic validation layer} enforcing typed schemas and sensor bounds at repository boundaries, catching \textbf{2 critical bugs} in upstream ingestion; fixed lane/breakout-port modeling across \textbf{3K+ optics}}
+        \resumeItem{Built reproducible \textbf{scikit-learn} pipeline evaluating peer telemetry for next-day optical forecasts; \textbf{leakage-resistant} splits and a \textbf{2K-iteration block bootstrap} over \textbf{1,284} samples rejected the feature (95\% CI crossed zero)}
+      \resumeItemListEnd
+    \resumeSubheading
+      {RoboVision Lab}{May 2024 -- Aug 2025}
+      {Summer Researcher}{University of Illinois Urbana-Champaign, IL}
+      \resumeItemListStart
+        \resumeItem{Researched a generalizable robotic pick and place task diffusion policy under the guidance of \textbf{Prof Saurabh Gupta} }
+        \resumeItem{Trained neural net policy utilizing \textbf{self and cross attention} on DROID data set in a \textbf{transformer architecture}}
+        \resumeItem{Implemented a \textbf{data-distributed parallel} system, \textbf{improving GPU utilization} from 30\% to 70\% avg}
+        \resumeItem{Developed system for \textbf{filtering and processing large video datasets} (1.7 TB) for training robotic ML policies}
+      \resumeItemListEnd
+    \resumeSubheading
+      {ECE 391 (Operating Systems) Head TA}{Aug 2026 -- Present}
+      {Head Teaching Assistant}{University of Illinois Urbana-Champaign, IL}
+      \resumeItemListStart
+        \resumeItem{Head TA for \textbf{300-student} OS course; direct \textbf{5 TAs and 30 CAs} across exam design, MP releases, and grading}
+      \resumeItemListEnd
+      \vspace{2pt}
+      \item[]\textit{\small Course Assistant (Jan 2025 -- Aug 2026)}\vspace{-5pt}
+      \resumeItemListStart
+        \resumeItem{Developed core Unix-like OS components (\textbf{Shell}, \textbf{Pipes}) for student projects; hold \textbf{6 weekly office hours}}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Abbott}{May -- Sep 2023}
+      {Software Engineering Intern}{Santa Clara, CA}
+      \resumeItemListStart
+        \resumeItem{Designed an efficient \textbf{data parsing algorithm} using \textbf{chunking techniques} to process \textbf{large text data} ($>$ 4GB) from glucose monitoring devices, enabling faster analysis of product performance metrics}
+        \resumeItem{Created a \textbf{data visualization dashboard} using \textbf{Power BI}, providing real-time insights into product testing results}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Project Experience}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{Out-of-Order RISC-V CPU (ECE 411)} $|$ \emph{SystemVerilog, Computer Architecture, Synopsys}}{Spring 2026}
+      \resumeItemListStart
+        \resumeItem{Built \textbf{7-stage out-of-order RV32IM} CPU with \textbf{explicit register renaming}; synthesized at \textbf{645 MHz / $\sim$200K area}}
+        \resumeItem{Implemented \textbf{2-way superscalar} front-end through commit and a \textbf{split LSQ} with one-hot age-tagged out-of-order load issue between older stores --- \textbf{+8.3\% geo-mean IPC} across 6 benchmarks}
+        \resumeItem{Built \textbf{gshare branch predictor with 64-entry BTB} achieving \textbf{81.3\% branch accuracy} (vs. 47.5\% baseline)}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{OStrich} $|$ \emph{Operating System, RISC-V, Embedded Systems}}{Fall 2024}
+      \resumeItemListStart
+        \resumeItem{Placed \textbf{3rd out of 100} teams in OS design competition}
+        \resumeItem{Implemented Unix-based OS with \textbf{paging virtual memory}, \textbf{multi-thread processes}, and \textbf{file system} on RISC-V}
+        \resumeItem{Developed \textbf{UART and VGA drivers}, \textbf{interrupt handling} and \textbf{real-time scheduling}}
+      \resumeItemListEnd
+
+    % \resumeProjectHeading
+    %   {\textbf{Distributed Transaction System} $|$ \emph{Go, TCP Networking, Concurrency Control}}{Spring 2025}
+    %   \resumeItemListStart
+    %     \resumeItem{Developed \textbf{Raft consensus protocol} for leader election and log replication, achieving sub-5 second leader recovery times and maintaining linearizability guarantees across distributed replicas with automated failover capabilities}
+    %     \resumeItem{Designed \textbf{ACID-compliant} transaction manager using \textbf{timestamp ordering} concurrency control, supporting up to 5 concurrent clients with deadlock-free operation through message-passing architecture and \textbf{two-phase commit}}
+    %   \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{CUDA CNN Convolution Kernel Optimization} $|$ \emph{CUDA C/C++}}{Spring 2025}
+      \resumeItemListStart
+        \resumeItem{Optimized convolution kernel for LeNet-5 inference on Fashion MNIST dataset, implementing\textbf{ matrix unrolling}, \textbf{tiled matrix multiplication}, and \textbf{kernel fusion} to achieve sub50ms run time on 10,000 images on A100 GPUs}
+        % \resumeItem{Profiled GPU performance using\textbf{ Nsight Systems} (nsys) and \textbf{Nsight Compute} (ncu)}
+        \resumeItem{Optimizations include \textbf{CUDA Streams}, \textbf{Tensor Cores} with Warp Matrix Functions, and FP16 arithmetic }
+      \resumeItemListEnd
+
+    % \resumeProjectHeading
+    %   {\textbf{FPGA: Plants vs Zombies Video Game} $|$ \emph{System Verilog, C, Hardware-Software Integration}}{Spring 2024}
+    %   \resumeItemListStart
+    %     \resumeItem{Recreated PvZ on Spartan 7 FPGA using \textbf{System Verilog} and C with tools like DebugCore and Simulation}
+    %     \resumeItem{Utilized \textbf{System on Chip} design with MicroBlaze CPU for \textbf{peripheral control} }
+    %   \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Go, C, C++, CUDA C/C++, SystemVerilog} \\
+     \textbf{Systems \& Databases}{: MongoDB, Docker, Redis, Linux, Raft Consensus, Two-Phase Commit, ACID Transactions} \\
+     \textbf{Frameworks \& Tools}{: Plotly Dash, PyTorch (DDP), scikit-learn, Pandas, Pydantic, Git, CUDA (Nsight), Performance Profiling}
+    }}
+ \end{itemize}
+
+% Original embedded-focused skills (kept for hardware/embedded roles):
+% \section{Technical Skills}
+%  \begin{itemize}[leftmargin=0.15in, label={}]
+%     \small{\item{
+%      \textbf{Embedded Programming}{: C, C++, Real-time Systems, Interrupt Handling, Device Drivers} \\
+%      \textbf{Hardware Protocols}{: UART, SPI, I2C, AXI, FPGA Development (Xilinx Vivado/Vitis)} \\
+%      \textbf{Tools \& Platforms}{: Linux, Git, Docker, System Verilog, Embedded Debugging, Performance Profiling}
+%     }}
+%  \end{itemize}
+
+\end{document}
