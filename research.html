@@ -24,6 +24,17 @@
         <h3>Prof. Saurabh Gupta</h3>
         <p>Worked at the intersection of computer vision and robotics to develop a robot action policy that generalizes to unseen tasks and environments. Using the DROID dataset — a large-scale collection of diverse robot task demonstrations — we modified the policy's diffusion architecture to improve generalization.</p>
         <p>Key contributions included creating visualizations for gripper heuristics to extract meaningful waypoints from noisy human-operated trajectories, training and evaluating baseline models through the full experimental pipeline (configuring training runs, monitoring loss, and conducting physical robot experiments), and investigating distributed data parallelism across multiple GPUs to accelerate training.</p>
+        <p>I also worked on data collection and experimentation, which ran on a daily cycle: train the model overnight, evaluate the policy on the physical robot the next day across roughly 80 trials spanning diverse objects and tasks, then use those results to refine the model before the next training run.</p>
+        <div class="photo-row">
+            <figure>
+                <img src="/images/robot_workcell.jpg" alt="Franka robot arm with Robotiq gripper mounted over a tabletop, surrounded by camera rigs" loading="lazy">
+                <figcaption>Franka Panda setup with four third-person stereo RGB cameras and a wrist-mounted first-person camera.</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/robot_workstation.jpg" alt="Workstation monitor showing wrist and external camera feeds of the robot during a pick-and-place task" loading="lazy">
+                <figcaption>What the robot sees: its live camera feeds on the monitor.</figcaption>
+            </figure>
+        </div>
     </div>
 </body>
 </html>
